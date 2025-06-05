@@ -1,0 +1,55 @@
+# Austin map (410 meters)
+map_path: 'f1tenth_racetracks/Austin/Austin_map'
+map_ext: '.png'
+sx: 0.0
+sy: 0.0
+stheta: 2.3
+
+# Zandvoort map (380 meters)
+# map_path: 'f1tenth_racetracks/Zandvoort/Zandvoort_map'
+# map_ext: '.png'
+# sx: 0.0
+# sy: 0.0
+# stheta: 1.3
+
+# Catalunya (405 meters)
+# map_path: 'f1tenth_racetracks/Catalunya/Catalunya_map'
+# map_ext: '.png'
+# sx: 0.0
+# sy: 0.0
+# stheta: -2.0
+
+# Hockenheim (350 meters)
+# map_path: 'f1tenth_racetracks/Hockenheim/Hockenheim_map'
+# map_ext: '.png'
+# sx: 0.0
+# sy: 0.0
+# stheta: 2.0
+
+# MoscowRaceway (310 meters)
+# map_path: 'f1tenth_racetracks/MoscowRaceway/MoscowRaceway_map'
+# map_ext: '.png'
+# sx: 0.0
+# sy: 0.0
+# stheta: -2.0
+
+# Silverstone (450 meters)
+# map_path: 'f1tenth_racetracks/Silverstone/Silverstone_map'
+# map_ext: '.png'
+# sx: 0.0
+# sy: 0.0
+# stheta: 1.0
+
+# DO NOT MODIFY
+run_name: 'map_wide'
+perf_num: 6
+seed: 12345
+
+mass_min: 3.0
+mass_max: 4.0
+lf_min: 0.147
+lf_max: 0.170
+tlad_min: 0.2
+tlad_max: 5.
+vgain_min: 0.5
+vgain_max: 1.5
