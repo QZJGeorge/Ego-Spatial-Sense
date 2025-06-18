@@ -1,10 +1,10 @@
 # F1Tenth Racing Simulation
 
 ## Prerequisites
-Make sure you have [Anaconda](https://docs.anaconda.com/getting-started/) installed before proceeding.
+We recommend using [Anaconda](https://docs.anaconda.com/getting-started/) to manage the environment. Alternatively, you may use a standard Python 3.10 setup. 
 
-## 1. Create a Virtual Conda Environment
-Create a new environment named `f1tenth` with python 3.10:
+## 1. Create a Virtual Conda Environment (Optional)
+Create a new environment named `f1tenth`:
 
 ```bash
 # create conda envivornment
@@ -21,9 +21,11 @@ Navigate to the `f1tenth_gym` directory and install the package:
 cd f1tenth_gym && pip install . && cd ..
 ```
 
-## 3. Running Examples
+## 3. Evaluation Examples
 
-`--model_path`: path to load a pretrained model.  
+The following are example evaluation scripts with corresponding configuration parameters. The game ends upon completing a lap or encountering a collision, boundary violation, or stalling, with distance traveled recorded as the score. For additional evaluation settings, please refer to the script.
+
+`--model_path`: path to load a pretrained model.
 
 `--device`: specify the runtime device (`cpu` or `cuda`). 
  
@@ -46,22 +48,22 @@ python3 evaluate.py --model_path "pretrained/transformer_0.pth" --device "cuda" 
 
 ## 4. Training Examples
 
-For additional training parameters, please refer to the training script.
+The following are example training scripts with corresponding configuration parameters. For additional training parameters, please refer to the script.
 
 ```bash
 # To train a new ego spatial sense model:
-python train_es2.py --device "cuda" --learning_rate 0.001 --num_epochs 500
+python train_es2.py --data_path "dataset/austin.csv" --device "cuda" --learning_rate 0.001 --num_epochs 500
 
 # To train a new mlp model:
-python train_mlp.py --device "cuda" --learning_rate 0.001 --num_epochs 500
+python train_mlp.py --data_path "dataset/austin.csv" --device "cuda" --learning_rate 0.001 --num_epochs 500
 
 # To train a new transformer model:
-python train_transformer.py --device "cuda" --learning_rate 0.001 --num_epochs 500
+python train_transformer.py --data_path "dataset/austin.csv" --device "cuda" --learning_rate 0.001 --num_epochs 500
 ```
 
 ## 5. Generate Training Data
 
-Run the gap_follow algorithm to generate expert training data. Press Ctrl+C at any time to save and exit.
+Run the gap_follow algorithm to generate expert training data. Press Ctrl+C at any time to save and exit. Record the dataset path for use during model training.
 
 ```bash
 python gap_follow.py

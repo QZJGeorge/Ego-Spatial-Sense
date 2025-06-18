@@ -1,10 +1,10 @@
 # Vision-Language Spatial Sense Model
 
 ## Prerequisites
-Make sure you have [Anaconda](https://docs.anaconda.com/getting-started/) installed before proceeding.
+We recommend using [Anaconda](https://docs.anaconda.com/getting-started/) to manage the environment. Alternatively, you may use a standard Python 3.10 setup.
 
-## 1. Create a Virtual Conda Environment
-Create a new environment named `vlssm` with python 3.10:
+## 1. Create a Virtual Conda Environment (Optional)
+Create a new environment named `vlssm`:
 
 ```bash
 # create conda envivornment
@@ -20,7 +20,7 @@ conda activate vlssm
 pip install -r requirements.txt
 ```
 
-## 3. Running Examples
+## 3. Evaluation Examples
 
 ```bash
 # To generate raycast data from front camera images
