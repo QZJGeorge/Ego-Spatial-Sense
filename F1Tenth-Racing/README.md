@@ -52,13 +52,13 @@ The following are example training scripts with corresponding configuration para
 
 ```bash
 # To train a new ego spatial sense model:
-python train_es2.py --data_path "dataset/austin.csv" --device "cuda" --learning_rate 0.001 --num_epochs 500
+python3 train_es2.py --data_path "dataset/austin.csv" --device "cuda" --learning_rate 0.001 --num_epochs 500
 
 # To train a new mlp model:
-python train_mlp.py --data_path "dataset/austin.csv" --device "cuda" --learning_rate 0.001 --num_epochs 500
+python3 train_mlp.py --data_path "dataset/austin.csv" --device "cuda" --learning_rate 0.001 --num_epochs 500
 
 # To train a new transformer model:
-python train_transformer.py --data_path "dataset/austin.csv" --device "cuda" --learning_rate 0.001 --num_epochs 500
+python3 train_transformer.py --data_path "dataset/austin.csv" --device "cuda" --learning_rate 0.001 --num_epochs 500
 ```
 
 ## 5. Generate Training Data
@@ -66,5 +66,5 @@ python train_transformer.py --data_path "dataset/austin.csv" --device "cuda" --l
 Run the gap_follow algorithm to generate expert training data. Press Ctrl+C at any time to save and exit. Record the dataset path for use during model training.
 
 ```bash
-python gap_follow.py
+python3 gap_follow.py
 ```
